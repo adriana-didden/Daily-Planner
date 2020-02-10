@@ -18,9 +18,11 @@ $(document).ready(function () {
             if (currentHour === (num[i])) {
                 console.log("here")
                 $("#textarea" + (num[i])).addClass('present')
+
             } else if (currentHour > (num[i])) {
                 console.log("bye")
                 $("#textarea" + (num[i])).addClass('past')
+                
             } else if (currentHour < (num[i])) {
                 console.log("notyet")
                 $("#textarea" + (num[i])).addClass('future')
@@ -35,7 +37,9 @@ $(document).ready(function () {
         }, false);
     }
     function save() {
-
+        $("saveBtn").click(function(){
+            $(".textarea").click();
+        });
 
     }
 
